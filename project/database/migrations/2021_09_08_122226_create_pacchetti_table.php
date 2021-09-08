@@ -13,13 +13,13 @@ class CreatePacchettiTable extends Migration
      */
     public function up()
     {
-        Schema::create('pacchetti', function (Blueprint $table) {
+        Schema::create('packages', function (Blueprint $table) {
             $table->id();
             $table->string('destination', 20);
             $table->string('date', 20);
             $table->string('address', 15);
             $table->string('postal_code', 5);
-            $table->tinyInteger('number-people')->unsigned();
+            $table->tinyInteger('number_people')->unsigned();
             $table->text('description');
             $table->float('price', 6, 2);
         });
@@ -32,6 +32,6 @@ class CreatePacchettiTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pacchetti');
+        Schema::dropIfExists('packages');
     }
 }
