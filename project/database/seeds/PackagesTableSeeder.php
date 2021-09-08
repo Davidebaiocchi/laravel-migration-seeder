@@ -18,9 +18,9 @@ class PackagesTableSeeder extends Seeder
            $newPacchetto->date = '15/08/2022';
            $newPacchetto->address = 'via Augusto 6';
            $newPacchetto->postal_code = '61124';
-           $newPacchetto->number_people = 'For max 6 People';
+           $newPacchetto->number_people = rand(1, 10);
            $newPacchetto->description = 'bla bla bla bla bla bla bla bla';
-           $newPacchetto->price = '900$ for People';
+           $newPacchetto->price = '900';
            $newPacchetto->save();
        }
     }

@@ -16,12 +16,14 @@ class CreatePacchettiTable extends Migration
         Schema::create('packages', function (Blueprint $table) {
             $table->id();
             $table->string('destination', 20);
-            $table->string('date', 20);
+            $table->string('date');
             $table->string('address', 15);
             $table->string('postal_code', 5);
-            $table->tinyInteger('number_people')->unsigned();
+            $table->tinyInsteger('number_people')->unsigned();
             $table->text('description');
-            $table->float('price', 6, 2);
+            $table->string('price');
+
+            $table->timestamps();
         });
     }
 
